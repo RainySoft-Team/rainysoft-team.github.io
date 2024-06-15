@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="https://rainysoft-team.github.io/RainySoftIcon.png" type="image/x-icon">
+		<script type="text/javascript">
+			window.onload = function() {
+				var startTime = new Date("2023-10-13");
+				setInterval(function() {
+					var currentTime = new Date();
+					var timeDiff = Math.abs(currentTime - startTime);
+					var days = Math.floor(timeDiff / (1000 * 3600 * 24));
+					var hours = Math.floor((timeDiff % (1000 * 3600 * 24)) / (1000 * 3600));
+					var minutes = Math.floor((timeDiff % (1000 * 3600)) / (1000 * 60));
+					var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+					document.getElementById("result").innerHTML = "距今已：" + days + "天 " + hours + "小时 " + minutes +
+						"分 " + seconds + "秒";
+				}, 1000); // 每秒钟刷新一次
+			}
+		</script>
+
+		<title>Rainy Soft Team</title>
+		<style>
+			body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				margin: 0;
+				padding: 0;
+				background: linear-gradient(120deg, #005da8b9, #9b0175e0);
+				color: #333;
+			}
+
+			header {
+				background: linear-gradient(120deg, #b10000, #194199);
+				color: rgb(243, 237, 237);
+				padding: 10px 20px;
+				text-align: center;
+				font-family: 'Courier New', Courier, monospace;
+				transition: padding 0.5s ease-in-out;
+			}
+
+			footer {
+				background: linear-gradient(120deg, #194199, #b10000);
+				color: rgb(235, 227, 227);
+				padding: 10px 20px;
+				text-align: center;
+				font-family: 'Times New Roman', Times, serif;
+				font-size: large;
+				transition: padding 0.5s ease-in-out;
+			}
+
+			header:hover {
+				padding: 20px 20px;
+			}
+
+			footer:hover {
+				padding: 20px 20px;
+			}
+
+			nav {
+				background: linear-gradient(120deg, #9c0000b9, #000cb1e0);
+				color: rgb(233, 222, 222);
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				
+				padding: 10px 0;
+				transition: background-color 0.3s ease;
+			}
+
+			nav a {
+				color: rgb(247, 243, 244);
+				text-decoration: none;
+				margin: 10px 20px;
+				font-size: 16px;
+				transition: color 0.3s ease;
+			}
+
+			nav a:hover {
+				background-color: #b8b8b8c7;
+				padding: 10px 20px;
+				border-radius: 5px;
+			}
+
+			.content {
+				padding: 20px;
+				background: rgba(31, 31, 31, 0.795);
+				margin: 15px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 15px;
+				opacity: 0;
+				animation: fadeIn 1.5s ease-out forwards;
+			}
+
+			.content h1 {
+				color: #8289e4ea;
+			}
+
+			.content p {
+				color: #e9e4e3;
+			}
+
+			.content h1 a {
+				color: #8289e4ea;
+			}
+
+			@keyframes fadeIn {
+				to {
+					opacity: 1;
+				}
+			}
+
+			/* 下载链接样式 */
+			.download-link {
+				display: inline-block;
+				padding: 15px 25px;
+				background-color: #363636c9;
+				color: #f8f5f5;
+				border-radius: 10px;
+				margin: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+				transition: background-color 0.3s ease, transform 0.3s ease;
+			}
+
+			.download-link:hover {
+				background-color: #3d3d3d;
+				transform: scale(1.1);
+			}
+		</style>
+	</head>
+	<body>
+
+		<header>
+			<h1>RainySoft Blogs</h1>
+		</header>
+
+		<nav>
+			<a href="https://rainysoft-team.github.io/index.html">首页</a>
+			<a href="#">新闻及资讯</a>
+			<a href="https://github.com/RainySoft-Team/rainysoft-team.github.io/issues">投稿</a>
+		</nav>
+
+
+		<!--博客卡片展示区域-->
+
+		<div class="content" id="welhead">
+			<h1>Welcome</h1>
+			<p>欢迎来到RainySoft Blogs，在这里你可以获取来自RainySoft的新闻和资讯</p>
+		</div>
+
+		<!--头结束-->
+
+		<div class="content" id="blog20240615A1">
+			<h1><a href="./blog20240615A1.html">新的网站</a></h1>
+			<p>如你所见，我们在2024年6月15日对我们的网站进行了更新</p>
+			<p>发布时间：2024/6/15 22:45:12 | 发布者：Rainy101112 | BLOGID：blog20240615A1</p>
+		</div>
+
+		<div class="content" id="ad">
+			<h1></h1>
+			<p>广告</p>
+			<p>RainySoft Team 官方QQ群：938134142</p>
+		</div>
+
+		<!--博客卡片展示区域结束-->
+
+
+		<footer>
+			<p>Pages by He4i & Rainy101112 | Website by github.io</p>
+		</footer>
+
+	</body>
+</html>
