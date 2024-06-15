@@ -1,102 +1,183 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			window.onload = function() {
+				var startTime = new Date("2023-10-13");
+				setInterval(function() {
+					var currentTime = new Date();
+					var timeDiff = Math.abs(currentTime - startTime);
+					var days = Math.floor(timeDiff / (1000 * 3600 * 24));
+					var hours = Math.floor((timeDiff % (1000 * 3600 * 24)) / (1000 * 3600));
+					var minutes = Math.floor((timeDiff % (1000 * 3600)) / (1000 * 60));
+					var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+					document.getElementById("result").innerHTML = "距今已：" + days + "天 " + hours + "小时 " + minutes +
+						"分 " + seconds + "秒";
+				}, 1000); // 每秒钟刷新一次
+			}
+		</script>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>RainySoft</title>
-    <link rel="shortcut icon" href="https://rainysoft-team.github.io/RainySoftIcon.png" type="image/x-icon">
-  </head>
+		<title>Rainy Soft Team</title>
+		<style>
+			body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				margin: 0;
+				padding: 0;
+				background: linear-gradient(120deg, #005da8b9, #9b0175e0);
+				color: #333;
+			}
 
-  <style>
-    header { 
-      /*TOPBAR*/
-      background-color: black;
-      padding: 15px;
-      text-align: left;
-    }
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fdfdfd;
-      text-align: center;
-    }
+			header {
+				background: linear-gradient(120deg, #b10000, #194199);
+				color: rgb(243, 237, 237);
+				padding: 10px 20px;
+				text-align: center;
+				font-family: 'Courier New', Courier, monospace;
+				transition: padding 0.5s ease-in-out;
+			}
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+			footer {
+				background: linear-gradient(120deg, #194199, #b10000);
+				color: rgb(235, 227, 227);
+				padding: 10px 20px;
+				text-align: center;
+				font-family: 'Times New Roman', Times, serif;
+				font-size: large;
+				transition: padding 0.5s ease-in-out;
+			}
 
-    nav ul li {
-      display: inline;
-    }
+			header:hover {
+				padding: 20px 20px;
+			}
 
-    nav ul li a {
-      color: #fdfdfd;
-      text-decoration: none;
-      padding: 5px 10px;
-    }
+			footer:hover {
+				padding: 20px 20px;
+			}
 
-    #underbar {
-      background-color: #1d1c1c;
-      color: #fdfdfd;
-      text-align: center;
-      padding: 100px 0;
-    }
-        
-    footer {
-      background-color: #1d1c1c;
-      color: #fdfdfd;
-      text-align: center;
-      padding: 20px 0;
-    }
-    
-  </style>
+			nav {
+				background: linear-gradient(120deg, #9c0000b9, #000cb1e0);
+				color: rgb(233, 222, 222);
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				
+				padding: 10px 0;
+				transition: background-color 0.3s ease;
+			}
 
-  <body>
+			nav a {
+				color: rgb(247, 243, 244);
+				text-decoration: none;
+				margin: 10px 20px;
+				font-size: 16px;
+				transition: color 0.3s ease;
+			}
 
-    <header>
-      <nav>
-        <ul>
-          <li><a href="https://rainysoft-team.github.io/index.html">主页</a></li>
-          <li><a href="https://rainysoft-team.github.io/en/index.html">English</a></li>
-          <li><a href="https://rainysoft-team.github.io/rainyos.html">RainyOS</a></li>
-        </ul>
-      </nav>
-    </header>
+			nav a:hover {
+				background-color: #b8b8b8c7;
+				padding: 10px 20px;
+				border-radius: 5px;
+			}
 
-    <h1>欢迎!!</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
-    <h1>·</h1>
+			.content {
+				padding: 20px;
+				background: rgba(31, 31, 31, 0.795);
+				margin: 15px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 15px;
+				opacity: 0;
+				animation: fadeIn 1.5s ease-out forwards;
+			}
 
-    <section id="underbar">
-      <div>
-        <h1>页面导航</h1>
-        <h2><a href="https://rainysoft-team.github.io/index.html">主页</a></h2>
-        <h2><a href="https://rainysoft-team.github.io/download/index.html">下载</a></h2>
-      </div>
-    </section>
-    
-    <footer>
-      <p>Pages by Rainy101112//Site by Github.io</p>
-    </footer>
-    
-  </body>
+			.content h1 {
+				color: #8289e4ea;
+			}
 
+			.content p {
+				color: #e9e4e3;
+			}
+
+			@keyframes fadeIn {
+				to {
+					opacity: 1;
+				}
+			}
+
+			/* 下载链接样式 */
+			.download-link {
+				display: inline-block;
+				padding: 15px 25px;
+				background-color: #363636c9;
+				color: #f8f5f5;
+				border-radius: 10px;
+				margin: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+				transition: background-color 0.3s ease, transform 0.3s ease;
+			}
+
+			.download-link:hover {
+				background-color: #3d3d3d;
+				transform: scale(1.1);
+			}
+		</style>
+	</head>
+	<body>
+
+		<header>
+			<h1>Rainy Soft Team</h1>
+		</header>
+
+		<nav>
+			<a href="#home">首页</a>
+			<a href="#about">介绍</a>
+			<a href="#downloads">下载</a>
+			<a href="#links">友情链接</a>
+			<a href="#">新闻及资讯</a>
+		</nav>
+
+		<div class="content" id="home">
+			<h1>Hello！</h1>
+			<p>欢迎访问 Rainy Soft 的官方网站！</p>
+		</div>
+
+		<div class="content" id="about">
+			<h1>介绍</h1>
+			<p>本团队以开发开源软件为主 为开源社区贡献一份力量</p>
+			<p>团队建立于2023-10-13</p>
+			<p id="result" style="font-size:15px;"></p>
+		</div>
+
+		<div class="content" id="project">
+			<h1>项目</h1>
+			<p>由Rainy Soft团队发起的项目工程</p>
+			<hr style="margin: 10px 0;">
+			<div style="display: flex; flex-wrap: wrap;">
+				<a href="https://github.com/RainySoft-Team/RainyOS" class="download-link">RainyOS</a>
+			</div>
+		</div>
+
+		<div class="content" id="downloads">
+			<h1>下载</h1>
+			<p>由Rainy Soft开发的软件以及代理发布的软件</p>
+			<hr style="margin: 10px 0;">
+			<div style="display: flex; flex-wrap: wrap;">
+				<a href="#" class="download-link">测试</a>
+				<a href="#" class="download-link">测试</a>
+				<a href="#" class="download-link">测试</a>
+				<a href="#" class="download-link">测试</a>
+				<a href="#" class="download-link">测试</a>
+			</div>
+		</div>
+
+		<div class="content" id="links">
+			<h1>友情链接</h1>
+			<p>以下是对本团队提供过支持的个人或团体</p>
+			<a href="https://qinghan0403.github.io/" class="download-link">He4i的个人页面</a>
+		</div>
+
+		<footer>
+			<p>Pages by He4i & Rainy101112 | Website by github.io</p>
+		</footer>
+
+	</body>
 </html>
