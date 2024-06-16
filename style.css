@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #e994a9e0, #3683c2b9);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(120deg, #dd9797, #456fca);
+    color: rgb(243, 237, 237);
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    transition: padding 0.5s ease-in-out;
+}
+
+footer {
+    background: linear-gradient(120deg, #5277c9, #d16464);
+    color: rgb(235, 227, 227);
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    transition: padding 0.5s ease-in-out;
+}
+
+header:hover {
+    padding: 20px 20px;
+}
+
+footer:hover {
+    padding: 20px 20px;
+}
+
+nav {
+    background: linear-gradient(120deg, #f79595b9, #5059d8e0);
+    color: rgb(233, 222, 222);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+nav a {
+    color: rgb(247, 243, 244);
+    text-decoration: none;
+    margin: 10px 20px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #b8b8b8c7;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.content {
+    padding: 20px;
+    background: rgba(31, 31, 31, 0.795);
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.content h1 {
+    color: #8289e4ea;
+}
+
+.content p {
+    color: #e9e4e3;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* 下载链接样式 */
+.download-link {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #363636c9;
+    color: #f8f5f5;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #3d3d3d;
+    transform: scale(1.1);
+}
