@@ -75,6 +75,10 @@ nav a:hover {
     color: #e9e4e3;
 }
 
+.content h1 a {
+    color: #8289e4ea;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
